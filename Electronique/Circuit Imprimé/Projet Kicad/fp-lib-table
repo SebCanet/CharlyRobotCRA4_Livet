@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name empreintes_CharlyRobot)(type KiCad)(uri ${KIPRJMOD}/empreintes_CharlyRobot.pretty)(options "")(descr ""))
+)

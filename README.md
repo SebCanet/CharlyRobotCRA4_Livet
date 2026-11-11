@@ -1,4 +1,4 @@
-# CharlyRoibotCRA4_Livet
+# CharlyRobotCRA4_Livet
 GRBL Firmware:
 - cpu_map.h probe pin (originally A5) sawped with soft reset pin (originally A0)
 

@@ -1,0 +1,58 @@
+Modifications de GRBL pour le Charly Robot
+
+config.h
+
+L34	#define CHARLYROBOT
+L137	#define ENABLE_SAFETY_DOOR_INPUT_PIN 		switch capot --> pin A1 arduino
+L247	//#define VARIABLE_SPINDLE			désactivation commande variable de la broche
+
+
+fichier config charly robot
+
+default_charlyrobot.h
+
+  #define DEFAULT_X_STEPS_PER_MM 640.0
+  #define DEFAULT_Y_STEPS_PER_MM 640.0
+  #define DEFAULT_Z_STEPS_PER_MM 640.0
+  #define DEFAULT_X_MAX_RATE 3000.0 // mm/min
+  #define DEFAULT_Y_MAX_RATE 3000.0 // mm/min
+  #define DEFAULT_Z_MAX_RATE 500.0 // mm/min
+  #define DEFAULT_X_ACCELERATION 100
+  #define DEFAULT_Y_ACCELERATION 100
+  #define DEFAULT_Z_ACCELERATION 40
+  #define DEFAULT_X_MAX_TRAVEL 320.0 // mm
+  #define DEFAULT_Y_MAX_TRAVEL 220.0 // mm
+  #define DEFAULT_Z_MAX_TRAVEL 80.0 // mm
+  #define DEFAULT_STEP_PULSE_MICROSECONDS 10
+  #define DEFAULT_STEPPING_INVERT_MASK 0
+  #define DEFAULT_DIRECTION_INVERT_MASK 0
+  #define DEFAULT_STEPPER_IDLE_LOCK_TIME 255 // msec (0-254, 255 keeps steppers enabled)
+  #define DEFAULT_STATUS_REPORT_MASK ((BITFLAG_RT_STATUS_MACHINE_POSITION)|(BITFLAG_RT_STATUS_WORK_POSITION))
+  #define DEFAULT_JUNCTION_DEVIATION 0.01 // mm
+  #define DEFAULT_ARC_TOLERANCE 0.002 // mm
+  #define DEFAULT_REPORT_INCHES 0 // false
+  #define DEFAULT_INVERT_ST_ENABLE 0 // false
+  #define DEFAULT_INVERT_LIMIT_PINS 1 // true
+  #define DEFAULT_SOFT_LIMIT_ENABLE 0 // false
+  #define DEFAULT_HARD_LIMIT_ENABLE 0  // false
+  #define DEFAULT_HOMING_ENABLE 1  // true
+  #define DEFAULT_HOMING_DIR_MASK 3 // move positive dir
+  #define DEFAULT_HOMING_FEED_RATE 250.0 // mm/min
+  #define DEFAULT_HOMING_SEEK_RATE 100.0 // mm/min
+  #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
+  #define DEFAULT_HOMING_PULLOFF 1.0 // mm
+
+ajout configuration default_charlyrobot
+
+defaults.h
+
+L91	#ifdef CHARLYROBOT
+  	  // Grbl generic default settings. Should work across different machines.
+  	  #include "defaults/defaults_charlyrobot.h"
+	#endif
+
+modification configuration atmega328
+
+cpu_map_atmega328p.h
+
+L120	#define CONTROL_INVERT_MASK ((1<<SAFETY_DOOR_BIT))

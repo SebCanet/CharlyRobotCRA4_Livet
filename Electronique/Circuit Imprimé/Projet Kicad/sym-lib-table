@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name 1843774)(type Legacy)(uri "${KIPRJMOD}/connecteur 8pins/KiCad/1843774.lib")(options "")(descr ""))
+  (lib (name CharlyRobot-cache)(type Legacy)(uri ${KIPRJMOD}/CharlyRobot-cache.lib)(options "")(descr ""))
+  (lib (name 2019-11-25_08-52-17)(type Legacy)(uri ${KIPRJMOD}/ul_3504321/KiCAD/2019-11-25_08-52-17/2019-11-25_08-52-17.lib)(options "")(descr ""))
+  (lib (name Regulator_Buck)(type Legacy)(uri ${KIPRJMOD}/Mes_modules.pretty/Regulator_Buck.lib)(options "")(descr ""))
+  (lib (name CharlyRobot)(type Legacy)(uri ${KIPRJMOD}/CharlyRobot.lib)(options "")(descr ""))
+  (lib (name CharlyRobot-rescue)(type Legacy)(uri ${KIPRJMOD}/CharlyRobot-rescue.lib)(options "")(descr ""))
+)
